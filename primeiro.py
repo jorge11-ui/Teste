@@ -1,0 +1,16 @@
+# valor_total = float(input("o valor total é: "))
+# valor_pago = float(input("o valor pago é: "))
+#
+# troco = valor_total - valor_pago
+#
+# print("o seu troco é: ", troco)
+#
+
+
+
+preços = [14.2, 30, 10, 40, 60, 10]
+print(f"Soma: {sum(preços)}")
+print(f"Media: {sum(preços) / len(preços)}")
+print(f"Mais caro: {max(preços)}")
+print(f"Mais barato: {min(preços)}")
+
