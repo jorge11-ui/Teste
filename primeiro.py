@@ -8,9 +8,14 @@
 
 
 
-preços = [14.2, 30, 10, 40, 60, 10]
-print(f"Soma: {sum(preços)}")
-print(f"Media: {sum(preços) / len(preços)}")
-print(f"Mais caro: {max(preços)}")
-print(f"Mais barato: {min(preços)}")
+# preços = [14.2, 30, 10, 40, 60, 10]
+# print(f"Soma: {sum(preços)}")
+# print(f"Media: {sum(preços) / len(preços)}")
+# print(f"Mais caro: {max(preços)}")
+# print(f"Mais barato: {min(preços)}")
+#
 
+nota = 10
+
+if nota < 20:
+    print("ola")
