@@ -1,3 +1,9 @@
+# O que aprender:
+# - input() / print()
+# - variáveis e tipos
+# - if básico
+# - listas e funções (len, sum, max, min)
+
 # valor_total = float(input("o valor total é: "))
 # valor_pago = float(input("o valor pago é: "))
 #

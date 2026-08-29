@@ -1,3 +1,9 @@
+# O que aprender:
+# - if / elif / else
+# - operadores de comparação e lógicos
+# - valores truthy / falsy
+# - operador ternário e match-case
+
 # ============================================================
 # PYTHON - CONDICIONAIS (if / elif / else) (Notas Importantes)
 # ============================================================
@@ -54,7 +60,7 @@ if idade >= 18 and idade < 65:
 if not (idade < 18):
     print("Não é menor")
 
-f idade >= 18 and idade < 65:
+if idade >= 18 and idade < 65:
     print("Adulto em idade ativa")
 
 if not (idade < 18):

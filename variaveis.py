@@ -1,3 +1,10 @@
+# O que aprender:
+# - variáveis e tipos básicos
+# - atribuição e unpacking
+# - nomenclatura (PEP 8)
+# - mutável vs imutável
+# - escopo / global
+
 # ============================================================
 # PYTHON - VARIÁVEIS (Notas Importantes)
 # ============================================================
