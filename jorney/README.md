@@ -1,2 +1,0 @@
-# Meu Projeto Jorney
-# jorney
