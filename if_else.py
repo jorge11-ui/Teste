@@ -54,13 +54,25 @@ if idade >= 18 and idade < 65:
 if not (idade < 18):
     print("Não é menor")
 
+f idade >= 18 and idade < 65:
+    print("Adulto em idade ativa")
+
+if not (idade < 18):
+    print("Não é menor")
+
 # ------------------------------------------------------------
 # 5. VALORES "TRUTHY" E "FALSY"
 # ------------------------------------------------------------
 # Em Python, toda expressão é avaliada como True ou False.
+# oooo:q
+#
 # São Falsy (considerados False):
 #   0, 0.0, "", [], {}, (), set(), None, False
+#   oooo:q
+#
 # Tudo o resto é Truthy.
+# oooo:q
+#
 
 nome = ""
 if nome:          # equivalente a: if nome != ""
@@ -127,3 +139,19 @@ match comando:
 # - Misturar tabs e espaços na indentação (erro de sintaxe).
 # - Variável não definida na condição -> NameError.
 # - Condições sempre verdadeiras por erro de lógica (and/or mal usados).
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#

@@ -18,8 +18,8 @@
 #    complex # operações complexas
 #    list # []
 # Exemplos:
-#
 num_int = 10.99
+
 print(int(num_int))
 
 num_float = 10.30
@@ -79,11 +79,10 @@ else:
     print("F")
 
 
-
-
-
-
-
-
+nome = ""
+if nome:          # equivalente a: if nome != ""
+    print("Tem nome")
+else:
+    print("Nome vazio")   # <-- executa
 
 
