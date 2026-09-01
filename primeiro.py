@@ -21,7 +21,7 @@
 # print(f"Mais barato: {min(preços)}")
 #
 
-nota = 10
-
-if nota < 20:
-    print("ola")
+# nota = 10
+#
+# if nota < 20:
+#     print("ola")

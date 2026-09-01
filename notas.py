@@ -17,22 +17,25 @@
 # salario_base = float(input())
 # segurança_social = 
 # subsidios = 
-print("ola")
+# print("ola")
+#
+#
+# temp = 39
+#
+# if temp < 0:
+#     print("Congelante")
+#
+# elif temp >=  0 and temp < 15:
+#     print("Frio")
+#
+# elif temp >= 15 and temp <25:
+#     print("Agradavel")
+#
+# elif temp >= 25 and temp < 35:
+#     print("quente")
+#
+# else:
+#     print("Muito quente")
 
 
-temp = 39
 
-if temp < 0:
-    print("Congelante")
-
-elif temp >=  0 and temp < 15:
-    print("Frio")
-
-elif temp >= 15 and temp <25:
-    print("Agradavel")
-
-elif temp >= 25 and temp < 35:
-    print("quente")
-
-else:
-    print("Muito quente")
