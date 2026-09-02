@@ -137,6 +137,10 @@ match comando:
     case _:                # wildcard (equivalente ao else)
         print("Desconhecido")
 
+#em vez de usar if else pode usar- se "match"
+
+
+
 # ------------------------------------------------------------
 # 10. ERROS COMUNS
 # ------------------------------------------------------------
@@ -145,19 +149,4 @@ match comando:
 # - Misturar tabs e espaços na indentação (erro de sintaxe).
 # - Variável não definida na condição -> NameError.
 # - Condições sempre verdadeiras por erro de lógica (and/or mal usados).
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
+
