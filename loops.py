@@ -97,7 +97,7 @@ print()
 # for i in range(2, 7):
 #     print(i)
 #
-# # Imprime 0, 2, 4, 6, 8 (de 2 em 2)
+# # Imprime 0, 2, 4, 6, 8    o ultimo numero significa(de 2 em 2) 
 # for i in range(0, 10, 2):
 #     print(i)
 #
@@ -113,7 +113,7 @@ for i in range(1, 11):
     if i == 5:
         break
     print(i)
-# Saída: 1 2 3 4
+# Saída: 1 2 3 
 
 # # Exemplo com while
 counter = 0
@@ -214,3 +214,6 @@ while True:  # loop infinito
 #
 # # Com condição
 # pares = [x for x in range(1, 11) if x % 2 == 0]
+
+
+#Nested loop- é um loop colocado dentro de outro loop
