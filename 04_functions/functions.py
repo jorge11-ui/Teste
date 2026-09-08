@@ -10,8 +10,10 @@
 
 #Uma funcao pode ser definida usando o Keyword: def
 #o objetivo de uma funcao é agrupar codigo que é executada varias vezes
-#def nome_funcao(parametro):
 
+
+#def nome_funcao(parametro): é um input que é definido para uma função
+#argumento: é o valor do parametro
     #declaração
     
     #exprecao return
@@ -74,3 +76,52 @@ print(result)
 
 #none value- representa a ausencia de de um valor(tipo de dados: Nonetype)
 
+import random
+
+for i in range (100):
+    if random.randint(0, 1) == 0:
+        print("a", end=" ")
+    else:
+        print("b", end=" ")
+print()
+
+#Funcoes de dentro de funcoes: uma funcao definida dentro de outr funcao ºé chamad: nested function"
+#É usada para organizar logica relacionada
+
+def minha_funcao(x):
+    x[0] = 20 #substitui o primeiro item por 20
+
+b = [10, 20, 30]
+minha_funcao(b)
+print(b)
+
+
+#Escopo - onde uma variavel é acessivel
+#local: dentro da funcao
+#global: fora da funcao
+
+x = 100  # global
+
+def mostra():
+    x = 50  # local - so existe dentro da funcao
+    print(x)
+
+mostra()  # 50
+print(x)  # 100
+
+
+#Argumentos por defeito - valor pre definido caso nao seja enviado
+
+def saudacao(nome="utilizador"):
+    print("ola " + nome)
+
+saudacao()       # ola utilizador
+saudacao("jorge")  # ola jorge
+
+
+#Keyword args - argumentos nomeados, nao precisam de ordem
+
+def contactos(nome, telefone):
+    print(nome + ": " + telefone)
+
+contactos(telefone="912345678", nome="jorge")

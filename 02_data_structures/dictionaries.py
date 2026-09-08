@@ -84,4 +84,17 @@ carro = {
 del carro ["ano"]
 print(carro)
 
+#Nested dictionary usado para armanzenar um ou mais dicionarios dentro de um dicionario
 
+alunos = {
+    "aluno1": {
+        "nome": "jorge",
+        "idade": 17
+    },
+    "aluno2": {
+        "nome": "joao",
+        "idade": "18"
+    }
+}
+
+print(alunos)
