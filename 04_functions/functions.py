@@ -15,7 +15,7 @@
 #def nome_funcao(parametro): é um input que é definido para uma função
 #argumento: é o valor do parametro
     #declaração
-    
+
     #exprecao return
 
 def fun():
@@ -34,11 +34,10 @@ print(div_naodiv(16))
 print(div_naodiv(3))
 
 def diz_ola(nome):
-    print("bom dia " + nome) 
-    print("boa tarde " + nome) 
-    print("boa noite " + nome) 
+    print("bom dia " + nome)
+    print("boa tarde " + nome)
+    print("boa noite " + nome)
 diz_ola("jorge")
-
 
 #retornar valores e retornar declarações
 #ao criar uma função usando "def()" pode se especificar o valor do retorno com uma instrução de retorno:
