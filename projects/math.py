@@ -1,4 +1,4 @@
-
+from decimal import Decimal
 while True:
     print("=====Conversor de unidade_dists======")
 
@@ -66,16 +66,32 @@ while True:
                 print(f"{valor_massa}g em miligramas é: {valor_massa * 1000} mg")
             else:
                 print("ErrorValue")
+
+    elif converter == 4:
+        TAXAS = {
+            'EUR': Decimal('1.0000'),
+            'USD': Decimal('1.0925'),
+            'BRL': Decimal('5.4530'),
+            'GBP': Decimal('0.8560')
+        }
+        print("As moedas disponiveis para a conversão")
+        print("As conversoes disponiveis sao:",list(TAXAS.keys()))
+        valor = Decimal(input("Introduza o valor:"))
+        origem = input("Origem: ").upper().strip()
+        destino = input("Destino: ").upper().strip()
+        if origem and destino == TAXAS:   
+             valor_euro = valor/TAXAS[origem]
+             valor_resultado = valor_euro * TAXAS[destino] 
+             resultado_final = valor_resultado.quantize(Decimal())
+             print(f"Resultado: {resultado_final} {destino}")
+
+        else:
+            print("Input ErrorValue")
+
     print("\n")
     escolha = input("Presse (sair) se quiser sair ou enter se quiser continuar: ")
     if escolha == "sair":
         break
     else:
         continue
-
-
-
-
-
-
 
