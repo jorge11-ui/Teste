@@ -47,7 +47,6 @@ paises = ["Portugal", "França", "Espanha", "Guine-bissau",'Denmark','Finland','
 america = ["Mexico", "Chile"]
 paises.extend(america) # Ou extend()--> pode ser adicionado qualquer objeto
 print(paises)
-----------------------//--------------------------------//------------------------------//----------------------------
 
 paises = ["Portugal", "França", "Espanha", "Guine-bissau",'Denmark','Finland','Norway','Iceland']
 pt, fr, es, gb, *scan = paises

@@ -58,7 +58,7 @@ try:
 except ValueError:
     # Só executa se houver erro
     print("Isso não é um número!")
-
+    
 # Exemplo com erro propositado:
 try:
     numero = int("abc")
