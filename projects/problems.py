@@ -1,5 +1,14 @@
-#Jogo inutil nao sei pq eu fiz isso.
+import time
+import sys
 import random
+sys.stdout.write("O computador esta a pensar")
+sys.stdout.flush()
+
+for i in range(3):
+    time.sleep(0.5)
+    sys.stdout.write(".")
+    sys.stdout.flush()
+time.sleep(0.5)
 
 opcoes = ["pedra", "papel", "tesoura"]
 primeira_vez = True
@@ -20,7 +29,8 @@ while True:
             continue
         elif escolha_user == escolha_computador:
             print(f"Voce escolheu: {escolha_user}")
-            print(f"O computador escolheu: {escolha_computador}")
+
+            print(f"\nO computador escolheu: {escolha_computador}")
             print("Empatado")
 
         #Onde o user sempre ganha
