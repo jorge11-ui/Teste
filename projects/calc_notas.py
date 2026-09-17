@@ -9,7 +9,7 @@ print("=============================================")
 
 print(("\nProdutos"))
 lista = {
-    "Chocolate": 2.99,
+        "Chocolate": 2.99,
     "Manteiga": 3.99,
     "Farinha": 5.00
 }

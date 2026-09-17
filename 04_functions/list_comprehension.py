@@ -10,6 +10,12 @@
 #
 #
 
+#Transformar um string em lista 
+string = "Jorge"
+lista = list(string)
+print(lista)
+
+
 squares = []
 for value in range(1, 11):
     square = value**2

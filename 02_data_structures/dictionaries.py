@@ -20,7 +20,7 @@ carro = {
 print(carro)
 
 
-#da para imprimir um item especifico do carronario
+#da para imprimir um item especifico do carro
 carro = {
     "marca": "lamborghini",
     "modelo": "svj",
@@ -28,7 +28,7 @@ carro = {
 }
 print(carro["modelo"])
 
-#Acessar itens
+#Acessar itens, é o mesmo metodo:
     #get()
 x = carro.get("marca")
 print(x)

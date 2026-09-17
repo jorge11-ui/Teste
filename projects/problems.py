@@ -41,6 +41,5 @@ while True:
     elif play == "n":
         print("Ok, tchau")
         break
-
     else:
         print("Opcao invalida, tente outra vez")

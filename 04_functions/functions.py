@@ -124,3 +124,9 @@ def contactos(nome, telefone):
     print(nome + ": " + telefone)
 
 contactos(telefone="912345678", nome="jorge")
+
+def saudacoes():
+    return "jorge"
+def ano(nome):
+    return f"17 {nome}"
+print(ano(saudacoes()))
