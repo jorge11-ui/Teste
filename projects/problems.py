@@ -12,7 +12,8 @@ while True:
     if play == "s":
         escolha_computador = random.choice(opcoes)
         primeira_vez = False
-        print("pedra, papel ou tesoura")
+        for opcao in opcoes:
+            print(opcao.upper())
         escolha_user = input("Escolha uma opcao valida: ").lower()
         
         if escolha_user not in opcoes:
