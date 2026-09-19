@@ -83,9 +83,11 @@ while True:
         print("====Voce escolheu Moeda========")
         print("As moedas disponiveis para a conversão")
         print("As conversoes disponiveis sao:",list(TAXAS.keys()))
+
         valor = Decimal(input("Introduza o valor:"))
         origem = input("Origem: ").upper().strip()
         destino = input("Destino: ").upper().strip()
+
         if origem and destino == TAXAS:   
              valor_euro = valor/TAXAS[origem]
              valor_resultado = valor_euro * TAXAS[destino] 
@@ -96,6 +98,7 @@ while True:
             print("Input ErrorValue")
 
     elif converter == 5:
+
         def area_converter(valor, unidade_area):
             if unidade_area == 1: #km para  m
                 return valor * 1000000

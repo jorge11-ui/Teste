@@ -8,7 +8,11 @@
 
 # Escreve aqui os teus testes:
 #
-#
+#basico list comprehension
+
+valor = []
+for x in range(10):
+    valor.append(x)
 
 #Transformar um string em lista 
 string = "Jorge"
@@ -43,5 +47,15 @@ for alien in aliens[0: 3]:
 
 for alien in aliens[0: 10]:
     print(alien)
+
+#Transformar listas em tuplas
+
+numero = [(i, i * i) for i in range(10)]
+for numeros in numero:
+    print(numeros)
+
+#numeros pares 
+numeros_pares = [ i for i in range(20) if i % 2 == 0]
+print(numeros_pares)
 
 

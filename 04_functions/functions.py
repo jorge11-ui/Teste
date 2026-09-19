@@ -130,3 +130,23 @@ def saudacoes():
 def ano(nome):
     return f"17 {nome}"
 print(ano(saudacoes()))
+
+
+#Funcao lambda
+#É uma funcao anonima pequena sem nome, ela pode receber qualquer tipo de argumento, mas so pode ter uma exprecao
+#A funcao lambda nao usa return, mas retorna explicitamente a funcao
+# x = lambda param1, param2, param3: param1 + param2 + param3
+# print(x(arg1, arg2, arg3))
+
+#exemplo funcao normal:
+def somar_numeros(a, b):
+    return a + b
+
+print(somar_numeros(5, 5))
+
+#ou em lambda
+somar = lambda a, b: a + b
+print(somar(5, 5))
+
+#funcao lambda autoinvocada
+print((lambda a, b: a + b)(5, 5))
