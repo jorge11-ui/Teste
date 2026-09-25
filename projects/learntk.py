@@ -1,6 +1,7 @@
 
+from re import L
 import tkinter as tk
-from tkinter import ttk
+from tkinter import Label, mainloop, ttk
 from PIL import ImageTk, Image
 #
 # window = tk.Tk()
@@ -32,27 +33,39 @@ from PIL import ImageTk, Image
 
 
 #Tkinter widgets
+# root = tk.Tk()
+# root.title("Widget")
+# root.maxsize(1000, 1000)
+# root.geometry("700x700+300+300")
+#
+# widgets = [
+#     tk.Label,
+#     tk.Checkbutton,
+#     ttk.Combobox, 
+#     tk.Entry,
+#     tk.Button,
+#     tk.Radiobutton,
+#     tk.Scale,
+#     tk.Spinbox,
+# ]
+#
+# for widget in widgets:
+#     try:
+#         widget = widget(root, text=widget.__name__)
+#     except tk.TclError:
+#         widget = widget(root)
+#     widget.pack(padx=30, pady=5, fill="x")
+#
+# root.mainloop()
+#
+
+#1.Label
+import tkinter as tk
+
 root = tk.Tk()
-root.title("Widget")
-root.maxsize(1000, 1000)
-root.geometry("700x700+300+300")
-
-widgets = [
-    tk.Label,
-    tk.Checkbutton,
-    ttk.Combobox, 
-    tk.Entry,
-    tk.Button,
-    tk.Radiobutton,
-    tk.Scale,
-    tk.Spinbox,
-]
-
-for widget in widgets:
-    try:
-        widget = widget(root, text=widget.__name__)
-    except tk.TclError:
-        widget = widget(root)
-    widget.pack(padx=30, pady=5, )
+root.title("Label")
+root.geometry("600x600")
+label = tk.Label(text="Ola mundo", font=("fira code", 100),)
+label.pack(expand=True)
 
 root.mainloop()

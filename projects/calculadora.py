@@ -7,12 +7,12 @@ historico = []
 
 def mostrar_menu():
     print("============Menu================")
-    print("\n1.Depositar dinheiro")
-    print("2.Consultar saldo")
-    print("3.Levantar dinheiro")
-    print("4.Transferir dinheiro")
-    print("5.Historico")
-    print("6.Sair")
+    print("\n[1].Depositar dinheiro")
+    print("[2].Consultar saldo")
+    print("[3].Levantar dinheiro")
+    print("[4].Transferir dinheiro")
+    print("[5].Historico")
+    print("[6].Sair")
 
 def depositar():
     global saldo
