@@ -43,18 +43,29 @@ paises = ["Portugal", "França", "Espanha", "Guine-bissau",'Denmark','Finland','
 paises.insert(3, "Mexico")
 
 #ampliar um lista adicionando outra
+
 paises = ["Portugal", "França", "Espanha", "Guine-bissau",'Denmark','Finland','Norway','Iceland']
 america = ["Mexico", "Chile"]
 paises.extend(america) # Ou extend()--> pode ser adicionado qualquer objeto
 print(paises)
 
+
+#Diferença entre extend e append
+numeros = [1, 2]
+numeros.append([3, 4])
+print(numeros)  # [1, 2, [3, 4]]
+
+numeros = [1, 2]
+numeros.extend([3, 4])
+print(numeros)  # [1, 2, 3, 4]
+
 paises = ["Portugal", "França", "Espanha", "Guine-bissau",'Denmark','Finland','Norway','Iceland']
-pt, fr, es, gb, *scan = paises
+pt, fr, es, gb, *resto= paises
 print(pt)
 print(fr)
 print(es)
 print(gb)
-print(scan)
+print(resto)
 
 #Remover itens de listas
 lst = ["item1", "item2"]
@@ -79,6 +90,3 @@ del frutas
 frutas = ["banana", "maça", "morango"]
 frutas.clear()
 print(frutas)
-
-
-
