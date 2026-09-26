@@ -73,5 +73,3 @@ result = teste(num1, num2)
 for conta in result:
     print(conta)
 
-
-
