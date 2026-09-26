@@ -303,4 +303,4 @@ mostrar_modelos_completos(modelos_completos)
 #Para enviar uma copia da lista a funcao:
 # nome_funcao(nome_lista[:]):
 # [:]-- cria um copia da lista para ser enviada para a funcao
- [:]-- cria um copia da lista para ser enviada para a funcao
+ #[:]-- cria um copia da lista para ser enviada para a funcao
