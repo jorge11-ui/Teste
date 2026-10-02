@@ -1,22 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Books site</title>
-    <link rel="styleshhet"  href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <h1>Livros da biblioteca</h1>
-    
-
-    <!-- <ul> -->
-    <!--     {% for livro in livros %} -->
-    <!--         <li> -->
-    <!--             {{ livro["Nome"] }} — {{ livro["Autor"] }} -->
-    <!--             ({{ livro["Disponibilidade"] }}) -->
-    <!--         </li> -->
-    <!--     {% endfor %} -->
-    <!-- </ul> -->
+    <ul>
+        {% for livro in livros %}
+            <li>
+                {{ livro["Nome"] }} — {{ livro["Autor"] }}
+                ({{ livro["Disponibilidade"] }})
+            </li>
+        {% endfor %}
+    </ul>
 </body>
 </html>

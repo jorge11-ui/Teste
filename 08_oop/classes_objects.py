@@ -15,7 +15,7 @@ class NomeClasse(objeto):
     ------------------
 """
 
-class Cao: #definir uma classe chamado Cao
+class Dog: #definir uma classe chamado Cao
     especie = "Pastor alemao"
     def __init__(self, name, age):
         self.name = name #usa o valor armazenado no parametro name e o armazena na variavel name
@@ -24,7 +24,7 @@ class Cao: #definir uma classe chamado Cao
     def sentar(self): #self refere ao objeto atual e é usado para armazer dados dentro dele
         print(self.name.title() + "agora esta a sentar")
 
-cao1 = Cao("Romeu", 3)
+cao1 = Dog("Romeu", 3)
 print(cao1.name)
 print(cao1.age)
 
@@ -47,11 +47,12 @@ class Animal:
     def falar(self):
         print("Som generico ")
 
-class Cao(Animal):
+class Ca(Animal):
     def ladrar(self):
         print(f"{self.nome} esta a ladrar")
 
-c = Cao("Jj")
+#Chamar metodos- para chamar uma funcao é preciso especificar a instancia e o metodo separados por um ponto
+c = Ca("Jj")
 c.falar()
 c.ladrar()
 
@@ -72,3 +73,37 @@ class Gato:
 class Cao:
     def som(self):
         return "AU au au au au"
+
+
+class Carro():
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.distancia_percorrida = 0
+
+
+    def nome_descritivo(self):
+        nome_completo = self.marca +  ", " + self.modelo + ", " + str(self.ano)
+        return nome_completo.title()
+    
+    def ler_hodometro(self):
+        print(f"Esse carro tem {str(self.distancia_percorrida)} km percorridos")
+
+    def update_car_distance(self, kilometragem):
+        self.distancia_percorrida = kilometragem
+
+carro_novo = Carro("audi", "a4", 2016)
+print(carro_novo.nome_descritivo())
+carro_novo.ler_hodometro()
+
+#Modificar o valor de um atributo
+carro_novo.distancia_percorrida = 20
+carro_novo.ler_hodometro()
+
+#Modificar o valor de atributo com um metodo
+carro_novo.update_car_distance(23)
+carro_novo.ler_hodometro()
+
+
+
