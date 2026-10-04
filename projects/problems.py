@@ -31,6 +31,7 @@ while True:
             print(f"Voce escolheu: {escolha_user}")
             print(f"O computador escolheu: {escolha_computador}")
             print("Voce ganhou")
+
         elif (escolha_computador == "papel" and escolha_user == "pedra") or \
             (escolha_computador == "pedra" and escolha_user == "tesoura") or \
             (escolha_computador == "tesoura" and escolha_user == "papel"):
