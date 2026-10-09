@@ -9,12 +9,71 @@
 # Escreve aqui os teus testes:
 # Decoradores sao formas flexiveis para modificar ou extender comportamentos de funcoes
 #
-def decorator(func):
+def decor(func):
     def wrapper():
         print("Antes de chamar a funcao")
         func()
     return wrapper
-@decorator
+@decor
 def greet():
     print("Ola mundo ")
 greet()
+# é basicamente uma funcao que que usa outra funcao como argumento
+
+
+
+
+# def decorator(func):
+#     def wrapper():
+#         print("Antes")
+#         func()
+#         print("Depois")
+#     return wrapper
+# @decorator #pega a funcao jj como um argumento
+# def jj():
+#     print("Ola")
+# jj()
+
+
+
+#decoradores com parametros
+def decorator(func):
+    def wrapper():
+        print(f"ola mundo antes {func.__name__}")
+        func()
+        print("completo")
+    return wrapper()
+
+@decorator
+def minha_func():
+    print("minha funcao")
+
+@decorator
+def outra_func():
+    print("outra funcao")
+
+
+#ou
+def myfunction(func):
+    def winner():
+        return func().upper()
+    return winner #retornar so o nome da vuncao nao a funcao(winner())
+
+@myfunction
+def otrofuncao():
+    return "Ola jorge"
+print(otrofuncao())
+
+
+#*args e **kwargs
+def changecase(func):
+  def myinner(*args, **kwargs):
+    return func(*args, **kwargs).upper()
+  return myinner
+
+@changecase
+def minha_function(nam):
+  return "Hello " + nam
+
+print(minha_function("JJ"))
+>>>>>>> 17e5dde (decorators)

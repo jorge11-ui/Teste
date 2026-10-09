@@ -24,3 +24,10 @@ mostrar = Sacola
 
 print(mostrar)
 
+
+from string.templatelib import Interpolation
+
+
+def main():
+    inicio = str(input("Escreva o seu nome: "))
+    print("ola jorge")
