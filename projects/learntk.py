@@ -48,7 +48,6 @@ from PIL import ImageTk, Image
 #     tk.Scale,
 #     tk.Spinbox,
 # ]
-#
 # for widget in widgets:
 #     try:
 #         widget = widget(root, text=widget.__name__)
@@ -65,7 +64,7 @@ import tkinter as tk
 root = tk.Tk()
 root.title("Label")
 root.geometry("600x600")
-label = tk.Label(text="Ola mundo", font=("fira code", 100),)
+label = tk.Label(text="Ola mundo", font=("Jet Brains Mono", 100),)
 label.pack(expand=True)
 
 root.mainloop()

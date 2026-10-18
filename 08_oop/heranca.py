@@ -1,6 +1,6 @@
 #Herença-quando uma classe herda da outra, ela automaticamente assumi todos os atributos e metodos da classe-pai
 
-class Carro():
+class Carro(): #classe pai
     def __init__(self, marca, modelo, ano):
         self.marca = marca
         self.modelo = modelo
@@ -22,12 +22,10 @@ carro_novo = Carro("audi", "a4", 2016)
 print(carro_novo.nome_descritivo())
 carro_novo.ler_hodometro()
 
-
 #nova classe
 
-class CarroEletrico(Carro): #o nome da classe pai tem que ser incluido entre parenteses
+class CarroEletrico(Carro): # Classe filho(o nome da classe pai tem que ser incluido entre parenteses)
     def __init_(self, marca, modelo, ano):
         super().__init__(marca, modelo, ano)
-
 tesla = CarroEletrico("tesla", "X", "2021")
 print(tesla.nome_descritivo())

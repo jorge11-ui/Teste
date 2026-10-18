@@ -5,4 +5,15 @@
 # - field(default_factory=...)
 # - frozen=True para imutável
 
-# Escreve aqui os teus testes:
+from dataclasses import dataclass
+import dataclasses
+
+@dataclass
+class Point():
+    x: int
+    y: int
+
+point = Point(1, 2)
+print(point)
+
+

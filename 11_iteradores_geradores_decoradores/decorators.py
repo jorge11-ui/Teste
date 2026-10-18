@@ -1,12 +1,10 @@
 # Decoradores
-
 # O que aprender:
 # - função dentro de função
 # - @decorator básico
 # - *args / **kwargs no wrapper
 # - functools.wraps
 
-# Escreve aqui os teus testes:
 # Decoradores sao formas flexiveis para modificar ou extender comportamentos de funcoes
 #
 def decor(func):
@@ -20,21 +18,16 @@ def greet():
 greet()
 # é basicamente uma funcao que que usa outra funcao como argumento
 
-
-
-
-# def decorator(func):
-#     def wrapper():
-#         print("Antes")
-#         func()
-#         print("Depois")
-#     return wrapper
-# @decorator #pega a funcao jj como um argumento
-# def jj():
-#     print("Ola")
-# jj()
-
-
+def decor(func):
+    def wrapper():
+        print("Antes")
+        func()
+        print("Depois")
+    return wrapper
+@decor #pega a funcao jj como um argumento
+def jj():
+    print("Ola")
+jj()
 
 #decoradores com parametros
 def decorator(func):
@@ -52,7 +45,6 @@ def minha_func():
 def outra_func():
     print("outra funcao")
 
-
 #ou
 def myfunction(func):
     def winner():
@@ -64,12 +56,11 @@ def otrofuncao():
     return "Ola jorge"
 print(otrofuncao())
 
-
 #*args e **kwargs
 def changecase(func):
-  def myinner(*args, **kwargs):
+  def mywinner(*args, **kwargs):
     return func(*args, **kwargs).upper()
-  return myinner
+  return mywinner
 
 @changecase
 def minha_function(nam):

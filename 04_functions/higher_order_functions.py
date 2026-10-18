@@ -6,8 +6,8 @@
 # - sorted com key
 
 #Uma  HOF é uma funcao que trabalha com outras funcoes, pode aceitar uma funcao como argumento, retornar uma funcao ou fazer os dois
-def nome(func):
-    return func("jorge")
+def nome(funcao):
+    return funcao("jorge")
 def upper(text):
    return text.upper() 
 

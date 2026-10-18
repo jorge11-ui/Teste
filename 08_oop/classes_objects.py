@@ -74,14 +74,12 @@ class Cao:
     def som(self):
         return "AU au au au au"
 
-
 class Carro():
     def __init__(self, marca, modelo, ano):
         self.marca = marca
         self.modelo = modelo
         self.ano = ano
         self.distancia_percorrida = 0
-
 
     def nome_descritivo(self):
         nome_completo = self.marca +  ", " + self.modelo + ", " + str(self.ano)
@@ -104,6 +102,3 @@ carro_novo.ler_hodometro()
 #Modificar o valor de atributo com um metodo
 carro_novo.update_car_distance(23)
 carro_novo.ler_hodometro()
-
-
-
