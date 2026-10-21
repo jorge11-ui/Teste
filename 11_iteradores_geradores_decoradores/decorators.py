@@ -7,12 +7,12 @@
 
 # Decoradores sao formas flexiveis para modificar ou extender comportamentos de funcoes
 #
-def decor(func):
+def decorador(func):
     def wrapper():
         print("Antes de chamar a funcao")
         func()
     return wrapper
-@decor
+@decorador
 def greet():
     print("Ola mundo ")
 greet()
@@ -67,4 +67,3 @@ def minha_function(nam):
   return "Hello " + nam
 
 print(minha_function("JJ"))
->>>>>>> 17e5dde (decorators)

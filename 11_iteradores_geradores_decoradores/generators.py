@@ -24,7 +24,7 @@
 # print(next(meu_gerador))
 # print(next(meu_gerador))
 # print(next(meu_gerador))
-#
+
 def conta(n):
     count = 1
     while count <= 0:
