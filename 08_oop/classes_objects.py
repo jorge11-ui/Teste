@@ -104,6 +104,3 @@ carro_novo.ler_hodometro()
 #Modificar o valor de atributo com um metodo
 carro_novo.update_car_distance(23)
 carro_novo.ler_hodometro()
-
-
-
