@@ -1,26 +1,22 @@
 from decimal import Decimal
 
 while True:
-    print("=====Conversor de unidade======")
-
-    print("1-distancia")
-    print("2-temperatura")
-    print("3-Massa")
-    print("4-Moeda")
-    print("5-Area")
-    print("\n")
+    inicio = """====================Conversor de unidade====================
+1-distancia
+2-temperatura
+3-Massa
+4-Moeda
+5-Area"""
+    print(inicio.upper())
     converter = int(input("O que queres converter: "))
-    print("Introduza a unidade")
-    #DISTANCIA
-
 
     if converter == 1:
-        print("====Voce escolheu Distancia=====")
+        print("\n====Voce escolheu Distancia=====")
         distancia_listas = ["1.Km-m", "2.m-Km", "3.m-cm"]
         for distancia_lista in distancia_listas:
-            print(distancia_lista)
+                print(distancia_lista)
 
-        unidade_dist = int(input("Qual a unidade(1-3): "))
+        unidade_dist = int(input("Converter para(1-3): "))
 
         if unidade_dist < 1 or unidade_dist > 3:
             print("ErrorValue(nao incluido)")
@@ -35,11 +31,11 @@ while True:
                 print(f"A distancia de {valor_distancia}m em centimetros sao: {valor_distancia * 100}cm")
 
     elif converter == 2:
-        print("====Voce escolheu Temperatura=======")
+        print("\n====Voce escolheu Temperatura=======")
         temperatura_listas = ["1. De Celsius-Fahreinheit", "2.De Fahreinheit-Celsius"]
         for temperatura_lista in temperatura_listas:
             print(temperatura_lista)
-        unidade_temp = int(input("Qual é a unidade(1-2): "))
+        unidade_temp = int(input("Converter para(1-2): "))
 
         if unidade_temp < 1 or unidade_temp > 2:
             print("ErrorValue(nao incluido)")
@@ -54,11 +50,11 @@ while True:
                 print("ErrorValue")
 
     elif converter == 3:
-        print("======Voce escolheu Massa======")
+        print("\n======Voce escolheu Massa======")
         massa_listas = ["1.Kg-g", "2.g-kg", "3.g-mg"]
         for massa_lista in massa_listas:
             print(massa_lista)
-        unidade_massa =int(input("Qual é a unidade: "))
+        unidade_massa =int(input("Converter para: "))
         if unidade_massa < 1 or unidade_massa > 3:
             print("ErrorValue(nao incluido)")
         else:
@@ -80,7 +76,7 @@ while True:
             'BRL': Decimal('5.4530'),
             'GBP': Decimal('0.8560')
         }
-        print("====Voce escolheu Moeda========")
+        print("\n====Voce escolheu Moeda========")
         print("As moedas disponiveis para a conversão")
         print("As conversoes disponiveis sao:",list(TAXAS.keys()))
 
@@ -98,7 +94,6 @@ while True:
             print("Input ErrorValue")
 
     elif converter == 5:
-
         def area_converter(valor, unidade_area):
             if unidade_area == 1: #km para  m
                 return valor * 1000000
@@ -120,11 +115,10 @@ while True:
         else:
             print("Error")
 
-        ####################
 
     print("\n")
-    escolha = input("Presse (sair) se quiser sair ou enter se quiser continuar: ")
-    if escolha == "sair":
+    escolha = input("Enter se quiser continuar, ´enter´, senao: ´sair´")
+    if escolha == "sair" or "sai":
         break
     else:
          continue

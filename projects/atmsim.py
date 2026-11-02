@@ -80,28 +80,25 @@ def opcoes():
     if escolha == 1:
         depositar()
     elif escolha == 2:
-            consultar()
+        consultar()
     elif escolha == 3:
-            levantar()
+        levantar()
     elif escolha == 4:
         transferir()
     elif escolha == 5:
         ver_historicos()
     elif escolha == 6:
-
-        print("A sair do ATM, ate logo!")
+        print("Obrigado por utilizar os nossos serviços")
         return False
     else:
-        print("Escolha invalida tente novamente ou saia")
+        print("Tente novamente")
     return True
-
-
 #loop
 continuar = True
 while continuar:
     mostrar_menu()
     continuar = opcoes()
     if continuar:
-        input("Press enter")
+        input("Press enter para continuar")
         print("\n" * 2)
     

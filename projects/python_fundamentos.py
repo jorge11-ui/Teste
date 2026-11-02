@@ -1,6 +1,4 @@
 # =============================================================
-# PYTHON FUNDAMENTOS - Tutorial com exemplos práticos
-# =============================================================
 # Cada secção ensia um conceito que falta no math.py
 # Executa com: python python_fundamentos.py
 # =============================================================
