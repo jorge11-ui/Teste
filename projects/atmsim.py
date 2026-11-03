@@ -1,4 +1,3 @@
-# ATM
 from decimal import Decimal
 import re
 
@@ -7,12 +6,12 @@ historico = []
 
 def mostrar_menu():
     print("============Menu================")
-    print("\n[1].Depositar dinheiro")
-    print("[2].Consultar saldo")
-    print("[3].Levantar dinheiro")
-    print("[4].Transferir dinheiro")
-    print("[5].Historico")
-    print("[6].Sair")
+    print("\n[1]- Depositar dinheiro")
+    print("[2]- Consultar saldo")
+    print("[3]- Levantar dinheiro")
+    print("[4]- Transferir dinheiro")
+    print("[5]- Historico")
+    print("[6]- Sair")
 
 def depositar():
     global saldo
@@ -39,11 +38,12 @@ def levantar():
         print(f"O seu saldo atual é {saldo} 💵")
 
 def transferir():
-    global saldo 
-    destinatario = str(input("Destinatario(nome): "))
+    global saldo
+    destinatario = str(input("Destinatario(nome): ")).strip()
 
     if not destinatario.replace(" ", " ").isalpha():
         print("Erro: O nome deve conter apenas letras")
+        return
     else:
         print(f"\nNome valido: {destinatario}")
 
@@ -101,4 +101,4 @@ while continuar:
     if continuar:
         input("Press enter para continuar")
         print("\n" * 2)
-    
+
