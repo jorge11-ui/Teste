@@ -22,7 +22,7 @@ while True:
             print("ErrorValue(nao incluido)")
         else:
             valor_distancia = float(input("valor a converter: "))
- 
+
             if unidade_dist == 1:
                 print(f"A distancia de {valor_distancia}km em metros sao: {valor_distancia * 1000}m")
             elif unidade_dist == 2:
@@ -84,9 +84,9 @@ while True:
         origem = input("Origem: ").upper().strip()
         destino = input("Destino: ").upper().strip()
 
-        if origem and destino == TAXAS:   
+        if origem and destino == TAXAS:
              valor_euro = valor/TAXAS[origem]
-             valor_resultado = valor_euro * TAXAS[destino] 
+             valor_resultado = valor_euro * TAXAS[destino]
              resultado_final = valor_resultado.quantize(Decimal())
              print(f"Resultado: {resultado_final} {destino}")
 
@@ -100,7 +100,7 @@ while True:
             elif unidade_area == 2: #Hm para m
                 return valor * 10000
             else:
-                return  None  
+                return  None
 
         print("Escolhe a conversao:")
         distacina_areas = ["1.Km2 para m2", "2.Hm2 para m2"]
@@ -109,7 +109,7 @@ while True:
         opcao_escolhida = int(input("Escolhe a conversão(1 ou 2): "))
         valor_area = float(input("Valor da area: "))
         resultado = area_converter(valor_area, opcao_escolhida)
-        
+
         if resultado is not None:
             print(f"O resultado é: {resultado}")
         else:

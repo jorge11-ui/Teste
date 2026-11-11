@@ -5,21 +5,30 @@ saldo = Decimal("0.00")
 historico = []
 
 def mostrar_menu():
-    print("============Menu================")
-    print("\n[1]- Depositar dinheiro")
-    print("[2]- Consultar saldo")
-    print("[3]- Levantar dinheiro")
-    print("[4]- Transferir dinheiro")
-    print("[5]- Historico")
-    print("[6]- Sair")
+    # Cores ANSI
+    AZUL = "\033[1;34m"
+    VERDE = "\033[1;32m"
+    VERMELHO = "\033[1;31m"
+    RESET = "\033[0m"
+
+    print(f"{AZUL}┌────────────────────────────────────┐{RESET}")
+    print(f"{AZUL}│         🏦 SISTEMA BANCÁRIO        │{RESET}")
+    print(f"{AZUL}├────────────────────────────────────┤{RESET}")
+    print("│  [1] 💵  Depositar                 │")
+    print("│  [2] 💳  Consultar Saldo           │")
+    print("│  [3] 🏧  Levantar Dinheiro         │")
+    print("│  [4] 💸  Transferir                │")
+    print("│  [5] 📜  Histórico                 │")
+    print(f"│  {VERMELHO}[6] 🚪  Sair                      {RESET}│")
+    print(f"{AZUL}└────────────────────────────────────┘{RESET}")
 
 def depositar():
     global saldo
     quantidade = Decimal(input("Valor a depositar: "))
     saldo += quantidade
     historico.append(quantidade)
-    print(f"\nVoce depositou: {quantidade:.2f} 💵")
-    print(f"Voce tem {saldo} 💵 na sua conta")
+    print(f"\nVoce depositou: {quantidade:.1f} 💵")
+    print(f"Voce tem {saldo:.1f} 💵 na sua conta")
 
 def consultar():
     print(f"\nSaldo atual é: {saldo} 💵")
@@ -38,6 +47,7 @@ def levantar():
         print(f"O seu saldo atual é {saldo} 💵")
 
 def transferir():
+
     global saldo
     destinatario = str(input("Destinatario(nome): ")).strip()
 
@@ -67,7 +77,11 @@ def ver_historicos():
             print(i)
 
 def opcoes():
-    entrada = input("Escolha: ")
+    AZUL = "\033[1;34m"
+    VERDE = "\033[1;32m"
+    VERMELHO = "\033[1;31m"
+    RESET = "\033[0m"
+    entrada = input(f"\n{VERDE}👉 Escolha uma opção: {RESET}")
 
     if entrada == "":
         return True
@@ -87,7 +101,7 @@ def opcoes():
         transferir()
     elif escolha == 5:
         ver_historicos()
-    elif escolha == 6:
+    elif escolha == 6 or "sair":
         print("Obrigado por utilizar os nossos serviços")
         return False
     else:
@@ -99,6 +113,8 @@ while continuar:
     mostrar_menu()
     continuar = opcoes()
     if continuar:
-        input("Press enter para continuar")
+        input("Press enter para continuar ou ´sair´: ")
+        if "sair" or "sai":
+            break
         print("\n" * 2)
 

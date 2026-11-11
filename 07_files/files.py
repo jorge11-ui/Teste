@@ -34,3 +34,7 @@ with open("teste.txt", "r") as file:
 print(ler_file)
 
 
+with open("teste.txt", "w") as file:
+    file.write("Ola mundo")
+
+

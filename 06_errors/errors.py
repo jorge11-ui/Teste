@@ -7,11 +7,6 @@
 # - raise
 # - exceções comuns
 
-# Escreve aqui os teus testes:
-
-
-#Exemplos de excecoes comuns
-
 # ValueError: valor invalido para a conversao
 try:
     int("abc")

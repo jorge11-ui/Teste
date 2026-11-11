@@ -1,71 +1,49 @@
+import pygame as pg
+import random
+import sys
 
-from re import L
-import tkinter as tk
-from tkinter import Label, mainloop, ttk
-from PIL import ImageTk, Image
-#
-# window = tk.Tk()
-# window.title("OLA")
-# button_widget = tk.Button(window, text="Welcome tkinter")
-# button_widget.pack()
-# tk.mainloop()
+pg.init()
+Altura, Largura = 800, 600
 
-#Tem que ter sempre root = tk.Tk() e no final um mainloop()
-# root = tk.Tk()
-# root.title("Tk example")
-# root.configure(background="White") # as cores e fontes de texto tem que estar em ""
-# # root.minsize(200, 200)
-# root.maxsize(600, 700)
-# root.geometry("600x600+100+100")
-#
-# tk.Label(root, text="Nada vai funcionar a menos que tu tentes").pack()
-# tk.Label(root, text="Jorge junior").pack()
-#
-# #Abrir imagem original
-# image_pillow = Image.open("pokemon.jpg")
-# #Redimensionar passando um tuple com (largura, altura)
-# image_pillow_size = image_pillow.resize((400, 400), Image.Resampling.LANCZOS)
-# image = ImageTk.PhotoImage(image_pillow_size)
-#
-# tk.Label(root, image=image).pack()
-#
-# root.mainloop()
+#::::CORES
+verde = (0, 255, 0)
+amarelo = (255, 255, 0)
+azul = (173, 216, 230)
+screen = pg.display.set_mode((Altura, Largura))
+
+lista_estrelas = []
+for i in range(100):
+    x_aleatorio = random.randint(0, 800)
+    y_aleatorio = random.randint(0, 480)
+    lista_estrelas.append((x_aleatorio, y_aleatorio))
+sol_x = 750
+vel_sol = 3
+cor_ceu = azul
+clock = pg.time.Clock()
+running = True
+while running:
+    for event in pg.event.get():
+        if event.type == pg.QUIT:
+            running = False
+
+    sol_x -= vel_sol
+    if sol_x <= 0:
+        cor_ceu = (0, 0, 0)
+    screen.fill((cor_ceu))
+
+    if sol_x <= 0:
+        for estrelas in lista_estrelas:
+            pg.draw.circle(screen, (255, 255, 255), estrelas, 3)
 
 
-#Tkinter widgets
-# root = tk.Tk()
-# root.title("Widget")
-# root.maxsize(1000, 1000)
-# root.geometry("700x700+300+300")
-#
-# widgets = [
-#     tk.Label,
-#     tk.Checkbutton,
-#     ttk.Combobox, 
-#     tk.Entry,
-#     tk.Button,
-#     tk.Radiobutton,
-#     tk.Scale,
-#     tk.Spinbox,
-# ]
-#
-# for widget in widgets:
-#     try:
-#         widget = widget(root, text=widget.__name__)
-#     except tk.TclError:
-#         widget = widget(root)
-#     widget.pack(padx=30, pady=5, fill="x")
-#
-# root.mainloop()
-#
+    pg.draw.circle(screen, amarelo, ( sol_x, 50,), 80)
+    pg.draw.rect(screen, verde, (0, 500, 800, 500))
+    pg.draw.rect(screen, verde, (200, 300, 15, 250))
+    pg.draw.circle(screen, verde, (200, 250,),50 )
+    pg.draw.circle(screen, verde, (240, 280,),50 )
+    pg.draw.circle(screen, verde, (160, 310,),50 )
 
-#1.Label
-import tkinter as tk
-
-root = tk.Tk()
-root.title("Label")
-root.geometry("600x600")
-label = tk.Label(text="Ola mundo", font=("fira code", 100),)
-label.pack(expand=True)
-
-root.mainloop()
+    pg.display.flip()
+    clock.tick(60)
+pg.quit()
+sys.exit()

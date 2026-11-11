@@ -7,11 +7,10 @@ class Carro():
         self.ano = ano
         self.distancia_percorrida = 0
 
-
     def nome_descritivo(self):
         nome_completo = self.marca +  ", " + self.modelo + ", " + str(self.ano)
         return nome_completo.title()
-    
+
     def ler_hodometro(self):
         print(f"Esse carro tem {str(self.distancia_percorrida)} km percorridos")
 
@@ -21,7 +20,6 @@ class Carro():
 carro_novo = Carro("audi", "a4", 2016)
 print(carro_novo.nome_descritivo())
 carro_novo.ler_hodometro()
-
 
 #nova classe
 

@@ -1,21 +1,20 @@
-#Jogo inutil nao sei pq eu fiz isso.
-import random
+from random import choice
 
 opcoes = ["pedra", "papel", "tesoura"]
 primeira_vez = True
-while True:
-    if primeira_vez: 
-        print("Queres Jogar?")
+while primeira_vez:
+    if primeira_vez:
+        print("Vamos jogar!!!!!")
     else:
         print("Queres jogar outra vez?? ")
-    play = input("\nIntroduza um opcao(s/n): ").lower()
-    if play == "s":
-        escolha_computador = random.choice(opcoes)
+    play = input("\n(s/n): ").lower()
+    if play == "s" or "sim":
+        escolha_computador = choice(opcoes)
         primeira_vez = False
         for opcao in opcoes:
             print(opcao.upper())
         escolha_user = input("Escolha uma opcao valida: ").lower()
-        
+
         if escolha_user not in opcoes:
             print("Opcao invalida")
             continue
@@ -25,7 +24,7 @@ while True:
             print("Empatado")
 
         #Onde o user sempre ganha
-        elif (escolha_user == "papel" and escolha_computador == "pedra") or \
+        elif (escolha_user in  "papel" and escolha_computador == "pedra") or \
             (escolha_user == "pedra" and escolha_computador == "tesoura") or \
             (escolha_user == "tesoura" and escolha_computador == "papel"):
             print(f"Voce escolheu: {escolha_user}")
@@ -37,9 +36,10 @@ while True:
             print(f"Voce escolheu: {escolha_user}")
             print(f"O computador escolheu: {escolha_computador}")
             print("Voce perdeu")
-        
-    elif play == "n":
+
+    elif play == "n" or "nao":
         print("Ok, tchau")
-        break
+        primeira_vez = False
     else:
         print("Opcao invalida, tente outra vez")
+        continue

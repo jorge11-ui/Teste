@@ -82,7 +82,6 @@ class Carro():
         self.ano = ano
         self.distancia_percorrida = 0
 
-
     def nome_descritivo(self):
         nome_completo = self.marca +  ", " + self.modelo + ", " + str(self.ano)
         return nome_completo.title()
