@@ -16,7 +16,6 @@ def menu_principal():
     print("[5] Sair")
     print("=" * 50)
 
-
 def main():
     while True:
         menu_principal()
@@ -41,7 +40,6 @@ def main():
             print("Escolhe uma opcao valida")
 
         sleep(2)
-
 
 if __name__ == "__main__":
     main()

@@ -22,6 +22,3 @@ livros = [
     {"Nome": "Admirável Mundo Novo", "Autor": "Aldous Huxley", "Categoria": "Distopia", "Ano": 1932, "Status": "Quero ler", "Disponibilidade": "Sim"},
     {"Nome": "O Retrato de Dorian Gray", "Autor": "Oscar Wilde", "Categoria": "Clássico", "Ano": 1890, "Status": "Quero ler", "Disponibilidade": "Sim"}
 ]
-
-
-#Status - quero ler, lido, a ler
