@@ -1,47 +1,56 @@
-import time
-import os
-from operations import sum_basic, subtrair, multiplicacao, quadratic, divisao, sqrt, logarithm
+from operations import (
+    sum_basic,
+    subtrair,
+    multiplicacao,
+    quadratic,
+    divisao,
+    sqrt,
+    logarithm,
+    factorial,
+    exponent,
+    div_inteira,
+)
+
+operacoes = {
+    "1": ("Somar", sum_basic),
+    "2": ("Subtrair", subtrair),
+    "3": ("Multiplicar", multiplicacao),
+    "4": ("Dividir", divisao),
+    "5": ("Raiz quadrada", sqrt),
+    "6": ("Equação quadrática", quadratic),
+    "7": ("Logaritmo", logarithm),
+    "8": ("Fatorial", factorial),
+    "9": ("Expoente", exponent),
+    "10": ("Divisão inteira", div_inteira),
+}
 
 
-os.system('clear')
-while True:
-    print("\n0-Sair")
-    print("1-Somar")
-    print("2-Subtrair")
-    print("3-Multiplicar")
-    print("4-Dividir")
-    print("5-Raiz quadrada")
-    print("6-Quadratica")
-    print("7-Logaritmo")
-    escolha = input("Escolhe opcao: ")
+def executar_terminal():
+    while True:
+        print("\n0 - Sair")
+        for opcao, (nome, _) in operacoes.items():
+            print(f"{opcao} - {nome}")
 
-    if escolha == "1":
-        print("A soma é:", sum_basic())
-    elif escolha == "2":
-        print("A subtração é:", subtrair())
-    elif escolha == "3":
-        print("A multiplicação é:", multiplicacao())
-    elif escolha == "4":
-        print("A divisão é:", divisao())
-    elif escolha == "5":
-        print("A raiz quadrada é: ", sqrt())
-    elif escolha == "6":
-        print(quadratic())
-    elif escolha == "7":
-        print(logarithm())
-    elif escolha == "0":
-        print("Até à próxima!")
-        break
-    else:
-        print("Opção inválida.")
-    continuar = input("\nPressiona Enter para continuar e 'N' para sair: ").upper()
-    if continuar == "N":
-        print("Programa encerrado")
-        break
-    else:
-        #waiting time
-        start = time.time()
-        print("\n...")
-        time.sleep(1)
-        end = time.time()
-        print("")
+        escolha = input("Escolhe opção: ")
+        if escolha == "0":
+            print("Até à próxima!")
+            break
+
+        operacao = operacoes.get(escolha)
+        if operacao is None:
+            print("Opção inválida.")
+            continue
+
+        nome, funcao = operacao
+        try:
+            print(f"{nome}: {funcao()}")
+        except ValueError:
+            print("Entrada inválida. Introduz um número válido.")
+
+        if input("\nPressiona Enter para continuar e 'N' para sair: ").upper() == "N":
+            print("Programa encerrado")
+            break
+
+
+if __name__ == "__main__":
+    executar_terminal()
