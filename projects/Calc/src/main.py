@@ -51,6 +51,5 @@ def executar_terminal():
             print("Programa encerrado")
             break
 
-
 if __name__ == "__main__":
     executar_terminal()

@@ -117,4 +117,5 @@ while continuar:
         if "sair" or "sai":
             break
         print("\n" * 2)
+        continuar
 

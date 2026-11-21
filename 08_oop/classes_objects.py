@@ -29,7 +29,7 @@ print(cao1.name)
 print(cao1.age)
 
 """
-Metodo __init__, é um metodo que executa automaticamente sempre que criamos um novo pedido 
+Metodo __init__, é um metodo que executa automaticamente sempre que criamos um novo pedido
 baseado na classe Cao
 O parametro self é obrigatorio na definicao do metodo e deve estar antes dos outros parametros
 Qualquer variavel prefixado com self esta disponivel a todos os metodos da classe
@@ -85,7 +85,7 @@ class Carro():
     def nome_descritivo(self):
         nome_completo = self.marca +  ", " + self.modelo + ", " + str(self.ano)
         return nome_completo.title()
-    
+
     def ler_hodometro(self):
         print(f"Esse carro tem {str(self.distancia_percorrida)} km percorridos")
 
